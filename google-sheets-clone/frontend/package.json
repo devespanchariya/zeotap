@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://devespanchariya.github.io/zeotap",
+  "homepage": "https://devespanchariya.github.io/zeotap/google-sheets-clone/frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
