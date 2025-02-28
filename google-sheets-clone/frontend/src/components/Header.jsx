@@ -18,6 +18,8 @@ import {
   removeDuplicates,
   findAndReplace,
 } from "../utils";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy, faCut, faPaste, faBold, faItalic, faUnderline, faAlignLeft, faAlignCenter, faAlignRight, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({
   activeCell,
@@ -125,15 +127,9 @@ const Header = ({
 
       {/* Cell Styles */}
       <div className="cell-styles">
-        <span className="material-icons copy" onClick={() => console.log("Copy clicked!")}>
-          content_copy
-        </span>
-        <span className="material-icons cut" onClick={() => console.log("Cut clicked!")}>
-          content_cut
-        </span>
-        <span className="material-icons paste" onClick={() => console.log("Paste clicked!")}>
-          content_paste
-        </span>
+        <FontAwesomeIcon icon={faCopy} className="copy" onClick={() => console.log("Copy clicked!")} />
+        <FontAwesomeIcon icon={faCut} className="cut" onClick={() => console.log("Cut clicked!")} />
+        <FontAwesomeIcon icon={faPaste} className="paste" onClick={() => console.log("Paste clicked!")} />
 
         {/* Font Selection */}
         <select onChange={handleFontChange} className="font-family-selection font-family">
@@ -152,31 +148,19 @@ const Header = ({
         </select>
 
         {/* Text Formatting */}
-        <span className="material-icons bold" onClick={handleBoldClick}>
-          format_bold
-        </span>
-        <span className="material-icons italic" onClick={handleItalicClick}>
-          format_italic
-        </span>
-        <span className="material-icons underline" onClick={handleUnderlineClick}>
-          format_underlined
-        </span>
+        <FontAwesomeIcon icon={faBold} className="bold" onClick={handleBoldClick} />
+        <FontAwesomeIcon icon={faItalic} className="italic" onClick={handleItalicClick} />
+        <FontAwesomeIcon icon={faUnderline} className="underline" onClick={handleUnderlineClick} />
 
         {/* Alignment */}
-        <span className="material-icons alignment" onClick={() => console.log("Align Left")}>
-          format_align_left
-        </span>
-        <span className="material-icons alignment" onClick={() => console.log("Align Center")}>
-          format_align_center
-        </span>
-        <span className="material-icons alignment" onClick={() => console.log("Align Right")}>
-          format_align_right
-        </span>
+        <FontAwesomeIcon icon={faAlignLeft} className="alignment" onClick={() => console.log("Align Left")} />
+        <FontAwesomeIcon icon={faAlignCenter} className="alignment" onClick={() => console.log("Align Center")} />
+        <FontAwesomeIcon icon={faAlignRight} className="alignment" onClick={() => console.log("Align Right")} />
 
         {/* Colors */}
         <div className="color-prop">
           <label htmlFor="color" className="material-icons">
-            format_color_text
+            <FontAwesomeIcon icon={faPalette} />
           </label>
           <input
             id="color"
@@ -187,7 +171,7 @@ const Header = ({
 
         <div className="color-prop">
           <label htmlFor="bgcolor" className="material-icons">
-            format_color_fill
+            <FontAwesomeIcon icon={faPalette} />
           </label>
           <input
             id="bgcolor"

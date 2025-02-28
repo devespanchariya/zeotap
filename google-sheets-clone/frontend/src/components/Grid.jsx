@@ -38,7 +38,7 @@ const Grid = ({
       const cells = [];
       // Add Row Header (SL.NO.)
       cells.push(
-        <div key={`row-header-${i}`} className="grid-cell">
+        <div key={`row-header-${i}`} className="grid-cell row-header">
           {i}
         </div>
       );
