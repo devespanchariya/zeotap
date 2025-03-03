@@ -1,65 +1,53 @@
-# Zeotap Project Repository
+# CDP Support Agent Chatbot
 
 ## Overview
 
-
-This repository contains two assignments: a web application mimicking Google Sheets and a support agent chatbot for Customer Data Platforms (CDPs). These projects demonstrate proficiency in web development and natural language processing.
-
-## Assignment 1: Web Application Mimicking Google Sheets
-![Image](https://github.com/user-attachments/assets/ae21bfb0-d1b2-42f1-8c62-c4278a1ea4df)
-
-### Features
-- **Spreadsheet Interface**: Mimics Google Sheets UI with a toolbar, formula bar, and cell structure.
-- **Drag Functions**: Implemented drag functionality for cell content and formulas.
-- **Cell Dependencies**: Formulas update automatically based on cell changes.
-- **Mathematical Functions**: Includes SUM, AVERAGE, MAX, MIN, and COUNT.
-- **Data Quality Functions**: Implements TRIM, UPPER, LOWER, REMOVE_DUPLICATES, and FIND_AND_REPLACE.
-
-### Tech Stack
-- **Frontend**: React, Vite
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/devespanchariya/zeotap.git
-   cd zeotap
-
-# Support Agent Chatbot for CDP "How-to" Questions
-
-## Overview
-This chatbot is designed to answer "how-to" questions related to four Customer Data Platforms (CDPs): Segment, mParticle, Lytics, and Zeotap. It extracts relevant information from the official documentation of these CDPs to guide users in performing tasks or achieving specific outcomes.
-
-![Image](https://github.com/user-attachments/assets/bf486eb9-9e93-4c44-8d53-40274d12fbe9)
-
-![Image](https://github.com/user-attachments/assets/e3007db1-cac2-4060-8b68-50b69c0b1df9)
-
-![Image](https://github.com/user-attachments/assets/e9ad2d61-2546-4ee2-9408-69cdea24cbbc)
-
-
+The CDP Support Agent Chatbot is a web-based application designed to assist users with "how-to" questions related to four Customer Data Platforms (CDPs): Segment, mParticle, Lytics, and Zeotap. The chatbot extracts relevant information from the official documentation of these platforms to guide users on how to perform tasks or achieve specific outcomes.
 
 ## Features
-- **Answer "How-to" Questions**: Provides responses based on official documentation.
-- **Documentation Extraction**: Retrieves and processes relevant sections dynamically.
-- **Handles Variations in Queries**: Understands different phrasings and prevents irrelevant queries.
-- **Cross-CDP Comparisons (Bonus)**: Compares functionalities across multiple CDPs.
-- **Advanced Queries (Bonus)**: Handles complex configurations and integrations.
 
-## Tech Stack
-- **CODE**: Python
-- **NLP Model**: OpenAI API for natural language processing
-- **Data Source**: Web scraping from official CDP documentation
+- **Answer "How-to" Questions**: The chatbot can respond to user inquiries about specific tasks or features within each CDP.
+- **Extract Information from Documentation**: It retrieves relevant information from the official documentation to provide accurate answers.
+- **Handle Variations in Questions**: The chatbot can manage different phrasing and terminology in user questions.
+- **Cross-CDP Comparisons**: It can answer questions about the differences in approaches or functionalities between the four CDPs.
+- **Advanced "How-to" Questions**: The chatbot can handle complex or platform-specific questions and provide guidance on advanced configurations and integrations.
 
-## Installation & Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/devespanchariya/zeotap
-   cd zeotap/chatbot
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Start the chatbot:
-   ```bash
-   python app.py
-   ```
+## Data Sources
+
+- **Segment Documentation**: [Segment Docs](https://segment.com/docs/?ref=nav)
+- **mParticle Documentation**: [mParticle Docs](https://docs.mparticle.com/)
+- **Lytics Documentation**: [Lytics Docs](https://docs.lytics.com/)
+- **Zeotap Documentation**: [Zeotap Docs](https://docs.zeotap.com/home/en-us/)
+
+## Requirements
+
+To run this project, you need to have Python 3.x installed. The following Python packages are required:
+
+- Flask
+- requests
+- beautifulsoup4
+- selenium
+- pandas
+- nltk
+- redis
+
+You can install the required packages using the following command:
+
+Steps to Run the Project
+Ensure Python is Installed: Make sure you have Python 3.x installed on your machine. You can download it from python.org.
+
+Navigate to the Project Directory: Change into the project directory where the requirements.txt file is located.
+
+Install Dependencies: Run the command to install all required Python packages listed in requirements.txt.
+
+Run the Scraper: Execute the scraper script to collect data from the CDP documentation. This will create JSON files containing the scraped data.
+
+Start the Flask Application: Run the Flask application to start the web server.
+
+Open the Chatbot Interface: Use your web browser to navigate to the specified URL to interact with the chatbot.
+
+Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, please feel free to submit a pull request or open an issue.
+
+```bash
+pip install -r requirements.txt
